@@ -1,0 +1,33 @@
+<mat-toolbar class="bg-primary bg-gradient">
+    <span class="text-white ms-4"><mat-icon>payment</mat-icon> Productos App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <mat-menu #menu="matMenu">
+      <button id="go_to_profile_button" mat-menu-item>
+        <mat-icon>account_circle</mat-icon>
+        <span>Mi Perfil</span>
+      </button>
+    
+      <button id="help_button" mat-menu-item class="" disabled>
+        <mat-icon>help</mat-icon>
+        <span>Ayuda</span>
+      </button> 
+    
+      <button id="logout_button" mat-menu-item class="" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Salir</span>
+      </button>
+     </mat-menu> 
+
+  </mat-toolbar>

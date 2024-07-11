@@ -1,0 +1,36 @@
+<mat-card class="product-card" appearance="outlined">
+  <mat-card-header>
+    <img mat-card-avatar [src]="data.image" alt="{{data.nombre}}" class="product-avatar" (load)="imageLoaded = true">
+    <mat-card-title>{{data.nombre}}</mat-card-title>
+    <mat-card-subtitle>{{data.tipo}}</mat-card-subtitle>
+  </mat-card-header>
+    
+  
+    <mat-spinner *ngIf="!imageLoaded" diameter="50"></mat-spinner>
+    
+  
+    <img mat-card-image [src]="data.image" alt="{{data.nombre}}" class="product-image" *ngIf="imageLoaded" (load)="imageLoaded = true">
+    
+    <mat-card-content>
+      <dl class="product-details">
+        <dt>Precio:</dt>
+        <dd>{{data.precio | currency}}</dd>
+        
+        <dt>Estado:</dt>
+        <dd>{{data.status}}</dd>
+
+        <dt>Ingredientes:</dt>
+        <dd>{{data.ingredientes}}</dd>
+        
+        <dt>Creado:</dt>
+        <dd>{{data.dateCreated | date:'shortDate'}}</dd>
+      </dl>
+      
+    </mat-card-content>
+    
+    <mat-card-actions align="end">
+      <button mat-icon-button color="primary" aria-label="Añadir a favoritos">
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>

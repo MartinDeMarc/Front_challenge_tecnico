@@ -1,0 +1,29 @@
+.product-card {
+    max-width: 400px;
+    margin: 16px auto;
+  }
+  
+  .product-avatar {
+    background-size: cover;
+  }
+  
+  .product-image {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 16px;
+    margin-top: 16px;
+  }
+  
+  .product-details dt {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .product-details dd {
+    margin: 0;
+  }

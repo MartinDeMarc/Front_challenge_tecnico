@@ -1,0 +1,13 @@
+.titulo {
+    font-size: 1.8rem;
+}
+
+mat-icon {
+    cursor: pointer;
+  }
+
+
+  .mat-table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
